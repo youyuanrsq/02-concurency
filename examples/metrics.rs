@@ -10,8 +10,6 @@ fn main() -> Result<()> {
     let metrics = Metrics::new();
     // start N workers and M requesters
 
-    println!("{:?}", metrics.snapshot());
-
     for i in 0..N {
         task_worker(i, metrics.clone())?;
     }
